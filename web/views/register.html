@@ -1,0 +1,21 @@
+<div class="register" ng-controller="registerController">
+    <div class="registerContainer">
+        <div class="login-title">
+            <img src="../img/logo.png" alt=""/>
+        </div>
+        <div class="login-form">
+            <form action="" method="post">
+                <input type="text" placeholder="邮箱" ng-model="regist.email"/>
+                <input type="password" placeholder="密码" ng-model="regist.pwd"/>
+                <input type="text" placeholder="昵称" ng-model="regist.nickName"/>
+                <input type="tel" placeholder="手机号" ng-model="regist.tel"/>
+                <button type="button" ng-click="register()">立即注册</button>
+                <a href="#/login">已有账号？立即登录</a>
+            </form>
+        </div>
+
+        <div class="tips">
+        </div>
+    </div>
+
+</div>

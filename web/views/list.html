@@ -1,0 +1,30 @@
+<div class="shop" ng-controller="listController">
+    <div class="sort clearFix">
+        <ul>
+            <li><span class="sortChoose" ng-click="default()">默认排序</span></li>
+            <li><span ng-click="sort()">热门排序</span></li>
+            <!--<li><span>筛选</span></li>-->
+        </ul>
+    </div>
+
+    <div ng-if="data.length == 0">暂无数据</div>
+
+    <div ng-if="data.length > 0">
+
+        <div class="list">
+
+            <div class="goodItems" ng-repeat="item in data">
+                <a href="#/detail/{{item.cupId}}">
+                    <img ng-src="{{item.firstImage}}" alt=""/>
+                    <div class="details">
+                        <h3>{{item.cupName}}</h3>
+                        <span class="price">￥{{item.price}}</span>
+                        <span class="sale">{{item.saleNumber}}人已付款</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

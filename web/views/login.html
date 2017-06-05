@@ -1,0 +1,19 @@
+<div ng-controller="loginController">
+    <div class="loginContainer">
+        <div class="login-title">
+            <img src="../img/logo.png" alt=""/>
+        </div>
+        <div class="login-form">
+            <form action="" method="post">
+                <input id="loginName" ng-model="user.userName" type="text" placeholder="用户名"/>
+                <input id="pwd" type="password" ng-model="user.pwd" placeholder="密码"/>
+                <button type="button" ng-click="login()">立即登录</button>
+                <a href="#/register">没有账号？立即注册</a>
+            </form>
+        </div>
+        <div class="tips">
+            请填写正确的用户名和密码
+        </div>
+    </div>
+
+</div>

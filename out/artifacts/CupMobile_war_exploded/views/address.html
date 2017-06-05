@@ -1,0 +1,55 @@
+<div ng-controller="addressController">
+    <div class="address">
+        <div class="addAddress" ng-click="showAdd()">
+            <span>+</span>
+            添加新地址
+        </div>
+        <div class="addressList">
+            <div class="addressItem" ng-repeat="item in addresses">
+                <label>
+                    <input type="radio" name="address" id="{{item.addressId}}"/>
+                    <span>{{item.receiverName}} {{item.receiverTel}} {{item.province}} {{item.city}} {{item.county}} {{item.addressName}}</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="submit" ng-click="submit()">提交订单</div>
+    <div class="addAddressContainer">
+        <h3>新增收货人地址</h3>
+
+        <form action="">
+            <div class="addAddressItem">
+                <span>收件人：</span>
+                <input type="text"/>
+            </div>
+            <div class="addAddressItem">
+                <span>联系电话：</span>
+                <input type="tel"/>
+            </div>
+            <div class="addAddressItem">
+                <span>省：</span>
+                <input type="text"/>
+            </div>
+            <div class="addAddressItem">
+                <span>市：</span>
+                <input type="text"/>
+            </div>
+            <div class="addAddressItem">
+                <span>区：</span>
+                <input type="text"/>
+            </div>
+            <div class="addAddressItem">
+                <span>详细地址：</span>
+                <input type="text"/>
+            </div>
+
+            <div class="addressOper">
+                <div class="back" ng-click="hideAdd()">返回</div>
+                <div class="ok" ng-click="chkAdd()">完成</div>
+            </div>
+        </form>
+    </div>
+    <div class="tips">
+        请填写正确的用户名和密码
+    </div>
+</div>

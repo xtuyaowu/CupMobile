@@ -1,0 +1,30 @@
+<div class="order" ng-controller="orderController">
+    <i class="icon-angle-left" ng-click="goBack()"></i>
+    <div class="cartContainer" ng-show="haveData">
+        <div class="orderList">
+            <ul>
+                <li ng-repeat="item in orders">
+                    <a href="#/detail/{{item.cup.cupId}}">
+                        <div class="orderStatus">
+                            交易成功&emsp;{{item.orderDate}}
+                        </div>
+                        <div class="orderImg">
+                            <img ng-src="{{item.firstImage}}" alt=""/>
+                        </div>
+                        <div class="orderCupName">
+                            <span>{{item.cup.cupName}}</span>
+                            <span>￥{{item.subTotal}}</span>
+                            <span>x{{item.cupQuantity}}</span>
+                        </div>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="haveNoData" ng-show="haveNodata">
+        您的{{data}}是空的，去<a href="#/list">商城</a>逛逛吧
+    </div>
+</div>

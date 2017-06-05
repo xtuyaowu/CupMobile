@@ -1,0 +1,43 @@
+﻿<div class="detail" ng-controller="detailController">
+    <!--<ion-slide-box active-slide="myActiveSlide">-->
+        <!--<ion-slide ng-repeat="img in imgArr">-->
+            <!--<img ng-src="images/{{img}}" alt=""/>-->
+        <!--</ion-slide>-->
+    <!--</ion-slide-box>-->
+    <i class="icon-angle-left" ng-click="goBack()"></i>
+    <div class="img">
+        <img ng-src="images/{{firstImage}}" alt=""/>
+    </div>
+    <div class="allDetails">
+        <h2>{{cup.cupName}}</h2>
+        <span class="detailPrice">￥{{cup.price}}</span>
+        <div class="saleNumber">
+            <span>月销量 {{cup.saleNumber}}件</span>
+            <span>快递 0.00</span>
+            <i class="icon-heart-empty" ng-click="addToStar(data)"></i>
+        </div>
+    </div>
+    <!--<div class="num">-->
+        <!--<div class="disabled">-</div>-->
+        <!--<input type="text" value="1" readonly/>-->
+        <!--<div>+</div>-->
+    <!--</div>-->
+    <div class="goodDetails">
+        <h4>商品详情</h4>
+        <div>
+            <ul>
+                <li>品牌：杯子</li>
+                <li>材质：{{cup.material.materialName}}</li>
+                <li>类型：{{cup.type.typeName}}</li>
+                <li>容量：{{cup.capacity}}ml</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="detImg">
+        <img ng-src="images/{{item}}" alt="" ng-repeat="item in imgArr" />
+    </div>
+    <a class="addToCart" href="" ng-click="addToCart(data)">加入购物车</a>
+    <div class="tips">
+    </div>
+</div>

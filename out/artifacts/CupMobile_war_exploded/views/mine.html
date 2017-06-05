@@ -1,0 +1,93 @@
+﻿<div ng-controller="mineController">
+    <div class="login">
+        <div ng-show="unLogin" class="loginBefore">
+            <a href="#/login">登录/注册</a>
+            <span>登录后有机会享受会员特价哦！</span>
+        </div>
+        <div ng-show="login" class="loginAfter">
+            <img src="img/icon.jpg" alt=""/>
+            <span>{{nickName}}</span>
+        </div>
+    </div>
+    <div class="mineOper">
+        <div class="circleList">
+            <a href={{starHref}}>
+                <div>
+                    <div class="circle pink">
+                        <i class="icon-star"></i>
+                    </div>
+                    <span>收藏</span>
+                </div>
+            </a>
+            <a href={{orderHref}}>
+                <div>
+                    <div class="circle green">
+                        <i class="icon-doc-text-inv"></i>
+                    </div>
+                    <span>订单</span>
+                </div>
+            </a>
+            <a href={{cartHref}}>
+                <div>
+                    <div class="circle blue">
+                        <i class="icon-basket"></i>
+                    </div>
+                    <span>购物车</span
+                            ></div
+                        ></a>
+            <a href="javascript:;">
+                <div>
+                    <div class="circle yellow">
+                        <i class="icon-rss-squared"></i>
+                    </div>
+                    <span>其他</span>
+                </div>
+            </a>
+        </div>
+        <div class="mineList">
+            <a href="javascript:;">
+                <div class="smallList clearFix">
+                    <i class="icon-pin"></i>
+                    <span>编辑资料</span>
+                    <i class="icon-angle-right"></i>
+                </div>
+            </a>
+            <a href={{cartHref}}>
+                <div class="smallList clearFix">
+                    <i class="icon-basket"></i>
+                    <span>我的购物车</span>
+                    <i class="icon-angle-right"></i>
+                </div>
+            </a>
+            <a href={{orderHref}}>
+                <div class="smallList clearFix">
+                    <i class="icon-doc-text-inv"></i>
+                    <span>我的订单</span>
+                    <i class="icon-angle-right"></i>
+                </div>
+            </a>
+            <a href={{starHref}}>
+                <div class="smallList clearFix">
+                    <i class="icon-heart"></i>
+                    <span>我的收藏</span>
+                    <i class="icon-angle-right"></i>
+                </div>
+            </a>
+        </div>
+        <div class="more" ng-show="login">
+            <a href="javascript:;">
+                <div class="smallList clearFix" ng-click="showConfirm()">
+                    <i class="icon-rss-squared"></i>
+                    <span>退出当前账号</span>
+                    <i class="icon-angle-right"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="confirm">
+        <h3>您确定要退出吗？</h3>
+        <div class="button" ng-click="hideConfirm()">取消</div>
+        <div class="button" ng-click="logOut()">退出</div>
+    </div>
+</div>

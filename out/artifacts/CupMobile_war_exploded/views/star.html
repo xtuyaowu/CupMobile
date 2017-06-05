@@ -1,0 +1,28 @@
+<div class="star" ng-controller="starController">
+    <i class="icon-angle-left" ng-click="goBack()"></i>
+    <div class="starContainer" ng-show="haveData">
+
+        <div class="starList">
+            <ul>
+                <li ng-repeat="item in stars">
+                    <a href="#/detail/{{item.cup.cupId}}">
+                        <div class="starListItem">
+                            <div class="img">
+                                <img ng-src="{{item.firstImage}}" alt=""/>
+                            </div>
+                            <div class="starItemName">
+                                <h4>{{item.cup.cupName}}</h4>
+                                <span class="price">￥{{item.cup.price}}</span>
+                                <i class="icon-trash-empty" ng-click="delStar(item.collectionId)"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="haveNoData" ng-show="haveNodata">
+        您的{{data}}是空的，去<a href="#/list">商城</a>逛逛吧
+    </div>
+</div>

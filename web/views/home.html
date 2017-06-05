@@ -1,0 +1,57 @@
+﻿<div class="home" ng-controller="homeController">
+    <div class="banner">
+        <ul>
+            <li><img src="img/banner01.jpg" alt=""/></li>
+            <li><img src="img/banner02.jpg" alt=""/></li>
+            <li><img src="img/banner03.jpg" alt=""/></li>
+            <li><img src="img/banner04.jpg" alt=""/></li>
+            <li><img src="img/banner05.jpg" alt=""/></li>
+        </ul>
+    </div>
+
+    <div class="indexList">
+        <h1>新品上市</h1>
+        <div class="scorll">
+            <div id="new" class="indexCupList">
+                <div class="indexListItem" ng-repeat="item in new">
+                    <a href="#/detail/{{item.cup.cupId}}">
+                        <img ng-src="images/{{item.firstImage}}" alt=""/>
+                        <h3>{{item.cup.cupName}}</h3>
+                        <span>￥{{item.cup.price}}</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="indexList">
+        <h1>热销爆款</h1>
+        <div class="scorll">
+            <div id="hot" class="indexCupList">
+                <div class="indexListItem" ng-repeat="item in hot">
+                    <a href="#/detail/{{item.cup.cupId}}">
+                        <img ng-src="images/{{item.firstImage}}" alt=""/>
+                        <h3>{{item.cup.cupName}}</h3>
+                        <span>￥{{item.cup.price}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="indexList">
+        <h1>款式多多</h1>
+        <div class="scorll">
+            <div id="types" class="indexCupList">
+                <div class="indexListItem" ng-repeat="item in types">
+                    <a href="#/detail/{{item.cup.cupId}}">
+                        <img ng-src="images/{{item.firstImage}}" alt=""/>
+                        <h3>{{item.cup.cupName}}</h3>
+                        <span>￥{{item.cup.price}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

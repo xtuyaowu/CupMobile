@@ -1,0 +1,56 @@
+﻿<div class="cart" ng-controller="cartController">
+    <div class="cartContainer" ng-show="haveData">
+        <div class="total">
+            <label><div class="chkBox" ng-class="{true: 'checkedOn', false: ''}[isCheckedOn]"><i class="icon-ok"></i></div>
+                <input id="chkAll" type="checkbox" ng-checked="allChk" /><span>全选</span>
+            </label>
+        </div>
+        <div class="cartList">
+            <ul>
+                <li ng-repeat="item in carts">
+                        <div class="chooseChk">
+                            <label>
+                                <div class="chkBox"><i class="icon-ok"></i></div>
+                                <input type="checkbox"/>
+                            </label>
+                        </div>
+                        <a href="#/detail/{{item.cup.cupId}}">
+                            <div class="cartImg">
+
+                                    <img ng-src="{{item.firstImage}}" alt=""/>
+
+                            </div>
+                            <div class="cartCupName">
+                                <span>{{item.cup.cupName}}</span>
+                                <span>￥{{item.cupPrice}}</span>
+                                <span>x{{item.cupQuantity}}</span>
+                            </div>
+                        </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="oper">
+            <div class="delAll">
+                <i class="icon-trash-empty"></i>删除选中
+            </div>
+            <a href="#/address">
+                <div class="settle">
+                    结算({{num}})
+                </div>
+            </a>
+            <div class="subtotal">
+                合计：<span>￥{{total}}</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="haveNoData" ng-show="haveNodata">
+        您的{{data}}是空的，去<a href="#/list">商城</a>逛逛吧
+    </div>
+
+
+</div>
